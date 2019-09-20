@@ -1,3 +1,4 @@
+
 #coding:utf-8
 import sys
 from aip import AipOcr
@@ -7,24 +8,30 @@ SECRET_KEY = 'm1WEhso1O9rkwVv2UEpDx5N27iM1EV6W'
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
 filePath=sys.argv[1]
-""" ¶ÁÈ¡Í¼Æ¬ """
+""" è¯»å–å›¾ç‰‡ """
 def get_file_content(filePath):
     with open(filePath, 'rb') as fp:
         return fp.read()
 
 image = get_file_content(filePath)
 # client.basicGeneral(image);
-""" Èç¹ûÓĞ¿ÉÑ¡²ÎÊı """
-options = {}
-options["language_type"] = "CHN_ENG"
-options["detect_direction"] = "true"
-options["detect_language"] = "true"
-options["probability"] = "true"
+# """ å¦‚æœæœ‰å¯é€‰å‚æ•° """
+# options = {}
+# options["language_type"] = "CHN_ENG"
+# options["detect_direction"] = "true"
+# options["detect_language"] = "true"
+# options["probability"] = "true"
 
-""" ´ø²ÎÊıµ÷ÓÃ(¸ß¾«¶È)Í¨ÓÃÎÄ×ÖÊ¶±ğ, Í¼Æ¬²ÎÊıÎª±¾µØÍ¼Æ¬ """
-res=client.basicAccurate(image, options) #basicGeneralÍ¨¹ıÊ¶±ğ
-for i in res['words_result']:
-	try:
-		print i['words']
-	except Exception as e:
-		pass
+# """ å¸¦å‚æ•°è°ƒç”¨(é«˜ç²¾åº¦)é€šç”¨æ–‡å­—è¯†åˆ«, å›¾ç‰‡å‚æ•°ä¸ºæœ¬åœ°å›¾ç‰‡ """
+# res=client.basicAccurate(image, options) #basicGeneralé€šè¿‡è¯†åˆ«
+# for i in res['words_result']:
+# 	try:
+# 		print i['words']
+# 	except Exception as e:
+# 		pass
+""" å¦‚æœæœ‰å¯é€‰å‚æ•° """
+options = {}
+options["top_num"] = 3
+options["baike_num"] = 5
+""" å¸¦å‚æ•°è°ƒç”¨è½¦è¾†è¯†åˆ« """
+client.carDetect(image, options)
