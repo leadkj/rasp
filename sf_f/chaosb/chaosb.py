@@ -51,7 +51,7 @@ if __name__ == '__main__':
             print("Measured Distance = {:.1f} m".format(dist))
             engine.say(("{:.1f}".format(dist)).replace(".","点"))
             engine.runAndWait()
-            #time.sleep(1)
+            time.sleep(0.5)
   
         # Reset by pressing CTRL + C
     except KeyboardInterrupt:
