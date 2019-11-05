@@ -2,7 +2,9 @@
 #导入 GPIO库
 import RPi.GPIO as GPIO
 import time
-  
+import pyttsx3
+
+engine=pyttsx3.init()
 #设置 GPIO 模式为 BCM
 GPIO.setmode(GPIO.BCM)
   
@@ -45,6 +47,8 @@ if __name__ == '__main__':
         while True:
             dist = distance()
             print("Measured Distance = {:.2f} cm".format(dist))
+            engine.say("{:.2f} cm".format(dist))
+            engin.runAndWait()
             time.sleep(1)
   
         # Reset by pressing CTRL + C
