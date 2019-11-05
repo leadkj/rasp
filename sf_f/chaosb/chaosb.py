@@ -47,8 +47,8 @@ if __name__ == '__main__':
     try:
         while True:
             dist = distance()
-            print("Measured Distance = {:.2f} cm".format(dist))
-            engine.say(("{:.2f}".format(dist)).replace(".","点"))
+            print("Measured Distance = {:.1f} m".format(dist))
+            engine.say(("{:.1f}".format(dist)).replace(".","点"))
             engine.runAndWait()
             time.sleep(1)
   
