@@ -39,7 +39,7 @@ def distance():
     # 计算超声波的往返时间 = 时刻2 - 时刻1
     time_elapsed = stop_time - start_time
     # 声波的速度为 343m/s， 转化为 34300cm/s。
-    distance = (time_elapsed * 34300) / 2
+    distance = ((time_elapsed * 34300) / 2)/100
   
     return distance
   
@@ -48,7 +48,7 @@ if __name__ == '__main__':
         while True:
             dist = distance()
             print("Measured Distance = {:.2f} cm".format(dist))
-            engine.say("{:.2f} cm".format(dist))
+            engine.say(("{:.2f}".format(dist)).replace(".","点"))
             engine.runAndWait()
             time.sleep(1)
   
