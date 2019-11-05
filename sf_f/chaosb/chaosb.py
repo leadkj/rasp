@@ -6,6 +6,7 @@ import pyttsx3
 
 engine=pyttsx3.init()
 engine.setProperty('voice', 'zh')
+engine.setProperty('rate',250)
 #设置 GPIO 模式为 BCM
 GPIO.setmode(GPIO.BCM)
   
@@ -50,7 +51,7 @@ if __name__ == '__main__':
             print("Measured Distance = {:.1f} m".format(dist))
             engine.say(("{:.1f}".format(dist)).replace(".","点"))
             engine.runAndWait()
-            time.sleep(1)
+            #time.sleep(1)
   
         # Reset by pressing CTRL + C
     except KeyboardInterrupt:
