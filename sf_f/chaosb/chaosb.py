@@ -48,7 +48,7 @@ if __name__ == '__main__':
             dist = distance()
             print("Measured Distance = {:.2f} cm".format(dist))
             engine.say("{:.2f} cm".format(dist))
-            engin.runAndWait()
+            engine.runAndWait()
             time.sleep(1)
   
         # Reset by pressing CTRL + C
