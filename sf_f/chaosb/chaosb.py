@@ -5,6 +5,7 @@ import time
 import pyttsx3
 
 engine=pyttsx3.init()
+engine.setProperty('voice', 'zh')
 #设置 GPIO 模式为 BCM
 GPIO.setmode(GPIO.BCM)
   
