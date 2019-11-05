@@ -49,9 +49,10 @@ if __name__ == '__main__':
         while True:
             dist = distance()
             print("Measured Distance = {:.1f} m".format(dist))
-            engine.say(("{:.1f}".format(dist)).replace(".","点"))
-            engine.runAndWait()
-            time.sleep(0.5)
+            if dist<=1.5:
+                engine.say(("{:.1f}".format(dist)).replace(".","点"))
+                engine.runAndWait()
+                time.sleep(0.5)
   
         # Reset by pressing CTRL + C
     except KeyboardInterrupt:
