@@ -37,4 +37,4 @@ while True:
 	channel=int(input('pleas input channel:'))
 	angle=int(input('pleas input angle:'))
 	set_servo_angle(channel, angle)
-	#time.sleep(1)
+	time.sleep(1)
