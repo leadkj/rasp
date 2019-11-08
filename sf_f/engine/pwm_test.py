@@ -24,7 +24,7 @@ pwm = Adafruit_PCA9685.PCA9685()							#把Adafruit_PCA9685.PCA9685()引用地�
 #date/4096=pulse_width/20 ->有上pulse_width的计算结果得date=4096*( ((angle*11)+500)/1000 )/20   -->int date=4096((angle*11)+500)/20000;
 	 	 
 def set_servo_angle(channel, angle):					#输入角度转换成12^精度的数值
-	date=4096*((angle*11)+500)/20000				#进行四舍五入运算 date=int(4096*((angle*11)+500)/(20000)+0.5)	
+	date=int(4096*((angle*11)+500)/(20000)+0.5)				#进行四舍五入运算 date=int(4096*((angle*11)+500)/(20000)+0.5)	
 	pwm.set_pwm(channel, 0, date)
  
  
