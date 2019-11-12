@@ -15,7 +15,8 @@ def set_servo_angle(tchannel, tangle):
     date=4096*((tangle*11)+500)/20000 
     pwm.set_pwm(tchannel, 0,int(date))
  
-def turn_servo(channel,direction,angle,location):
+def turn_servo(channel,direction,angle):
+    global location
     if direction==1:
         for i in range(angle):
             set_servo_angle(channel, location+i)
@@ -43,5 +44,5 @@ location=0
 
 while 1:
     input("aaa")
-    turn_servo(0,1,90,location)
-    turn_servo(1,1,180,location)
+    turn_servo(0,1,90)
+    turn_servo(1,1,180)
