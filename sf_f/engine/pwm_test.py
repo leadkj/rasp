@@ -16,7 +16,7 @@ def set_servo_angle(tchannel, tangle):
     pwm.set_pwm(tchannel, 0,int(date))
  
 def turn_servo(channel,direction,angle):
-		location=0
+    location=0
     if direction==1:
         for i in range(angle):
             set_servo_angle(channel, location+i)
