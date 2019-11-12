@@ -42,4 +42,6 @@ print('Moving servo on channel x, press Ctrl-C to quit...')
 location=0
 
 while 1:
+    input("aaa")
     turn_servo(0,1,90,location)
+    turn_servo(1,1,180,location)
