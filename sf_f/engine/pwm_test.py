@@ -45,4 +45,4 @@ location=0
 while 1:
     input("aaa")
     turn_servo(0,1,90)
-    turn_servo(1,1,180)
+    turn_servo(1,1,60)
