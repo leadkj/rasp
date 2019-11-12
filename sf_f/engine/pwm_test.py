@@ -15,8 +15,7 @@ def set_servo_angle(tchannel, tangle):
     date=4096*((tangle*11)+500)/20000 
     pwm.set_pwm(tchannel, 0,int(date))
  
-def turn_servo(channel,direction,angle):
-    location=0
+def turn_servo(channel,direction,angle,location):
     if direction==1:
         for i in range(angle):
             set_servo_angle(channel, location+i)
@@ -40,5 +39,7 @@ def turn_servo(channel,direction,angle):
 pwm.set_pwm_freq(60)
  
 print('Moving servo on channel x, press Ctrl-C to quit...')
+location=0
+
 while 1:
-    turn_servo(0,1,90)
+    turn_servo(0,1,90,location)
