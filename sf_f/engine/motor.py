@@ -15,16 +15,16 @@ while 1:
     print(chanles)
     chanle=int(input('choice a chanle:'))
     angle=chanles[chanle][-1]
-    f=int(input('forward or back:'))
+    f=int(input('forward or backward:'))
     if f==1:
-        f_angle=int(input('pleas input f_angle:'))
+        f_angle=int(input('pleas input forward_angle:'))
         for i in range(f_angle):
             set_servo_angle(chanle, angle+i)
             time.sleep(0.01)
         angle=f_angle+angle
         chanles[chanle].append(angle)
     elif f==0:
-        b_angle=int(input('pleas input b_angle:'))
+        b_angle=int(input('pleas input backward_angle:'))
         if angle<b_angle:
             for i in range(angle):
                 set_servo_angle(chanle,angle-i)
@@ -38,4 +38,4 @@ while 1:
             angle=angle-b_angle
             chanles[chanle].append(angle)
     else:
-        print('please input 1 or 0')
+        print('please input 1 or 0,1 is forward and 0 is backward')
