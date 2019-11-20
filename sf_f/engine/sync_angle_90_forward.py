@@ -10,6 +10,7 @@ def set_servo_angle(channel, angle):
  
 pwm.set_pwm_freq(60)
 def setup():  ##舵机回到初始位置
+    print(s1,s2,s3,s4)
     for i in range(s1):
         set_servo_angle(0,s1-i)
         time.sleep(sleep)
@@ -39,6 +40,7 @@ try:
                 s1=i
                 s2=i
         else:
+            print('else1')
             for i in range(91):
                 set_servo_angle(0,s1-i)
                 set_servo_angle(1,s2-i)
@@ -56,6 +58,7 @@ try:
                 s3=i
                 s4=i
         else:
+            print('else1')
             for i in range(91):
                 set_servo_angle(2,s1-i)
                 set_servo_angle(3,s2-i)
@@ -63,18 +66,18 @@ try:
             s3=s3-90
             s4=s4-90
         for i in range(90):
-            set_servo_angle(0,s1-i)
-            set_servo_angle(1,s2-i)
+            set_servo_angle(0,90-i)
+            set_servo_angle(1,90-i)
             time.sleep(sleep)
-        s1=s1-90
-        s2=s2-90
+            s1=s1-1
+            s2=s2-1
         for i in range(90):
-            set_servo_angle(2,s3-i)
-            set_servo_angle(3,s4-i)
+            print('for2')
+            set_servo_angle(2,90-i)
+            set_servo_angle(3,90-i)
             time.sleep(sleep)
-        s3=s3-90
-        s4=s4-90
+            s3=s3-1
+            s4=s4-1
 except KeyboardInterrupt:
     setup()
     print("exit")
-
