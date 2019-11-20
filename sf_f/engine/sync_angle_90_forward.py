@@ -35,12 +35,7 @@ try:
                 time.sleep(sleep)
             s1=s1-90
             s2=s2-90
-        for i in range(90):
-            set_servo_angle(0,s1-i)
-            set_servo_angle(1,s2-i)
-            time.sleep(sleep)
-        s1=s1-90
-        s2=s2-90
+        
 
 
         if s3==0:
@@ -57,6 +52,12 @@ try:
                 time.sleep(sleep)
             s3=s3-90
             s4=s4-90
+        for i in range(90):
+            set_servo_angle(0,s1-i)
+            set_servo_angle(1,s2-i)
+            time.sleep(sleep)
+        s1=s1-90
+        s2=s2-90
         for i in range(90):
             set_servo_angle(2,s3-i)
             set_servo_angle(3,s4-i)
