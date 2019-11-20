@@ -14,7 +14,7 @@ s1=0
 s2=0
 s3=0
 s4=0
-sleep=0
+sleep=0.01
 while 1:
 
     if s1==0:
@@ -24,7 +24,6 @@ while 1:
             time.sleep(sleep)
             s1=i
             s2=i
-        print('if1')
     else:
         for i in range(91):
             set_servo_angle(0,s1-i)
@@ -47,7 +46,6 @@ while 1:
             time.sleep(sleep)
             s3=i
             s4=i
-        print('if1')
     else:
         for i in range(91):
             set_servo_angle(2,s1-i)
