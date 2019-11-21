@@ -11,10 +11,18 @@ def set_servo_angle(channel, angle):
 pwm.set_pwm_freq(60)
 def setup():  ##舵机回到初始位置
     print(s1,s2,s3,s4)
-    for j in (s1,s2,s3,s4):
-        for i in range(j):
-            set_servo_angle(0,j-i)
-            time.sleep(sleep)
+    for i in range(s1):
+        set_servo_angle(0,s1-i)
+        time.sleep(sleep)
+    for i in range(s2):
+        set_servo_angle(1,s2-i)
+        time.sleep(sleep)
+    for i in range(s3):
+        set_servo_angle(2,s3-i)
+        time.sleep(sleep)
+    for i in range(s4):
+        set_servo_angle(3,s4-i)
+        time.sleep(sleep)
 print('Moving servo on channel x, press Ctrl-C to quit...')
 s1=0
 s2=0
