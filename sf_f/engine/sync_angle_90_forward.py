@@ -76,172 +76,109 @@ try:
             for i in range(91):
                 set_servo_angle(0,i)
                 set_servo_angle(1,i)
+                set_servo_angle(2,i)
+                set_servo_angle(3,i)
+                set_servo_angle(4,i)
+                set_servo_angle(5,i)
+                set_servo_angle(6,i)
                 time.sleep(sleep)
                 s1=i
                 s2=i
+                s3=i
+                s4=i
+                s5=i
+                s6=i
+                s7=i
         else:
             print('else1')
             for i in range(91):
                 set_servo_angle(0,s1-i)
                 set_servo_angle(1,s2-i)
+                set_servo_angle(2,s3-i)
+                set_servo_angle(3,s4-i)
+                set_servo_angle(4,s5-i)
+                set_servo_angle(5,s6-i)
+                set_servo_angle(6,s7-i)
                 time.sleep(sleep)
             s1=s1-90
             s2=s2-90
-        
-
-
-        if s3==0:
-            for i in range(91):
-                set_servo_angle(2,i)
-                set_servo_angle(3,i)
-                time.sleep(sleep)
-                s3=i
-                s4=i
-        else:
-            print('else1')
-            for i in range(91):
-                set_servo_angle(2,s1-i)
-                set_servo_angle(3,s2-i)
-                time.sleep(sleep)
             s3=s3-90
             s4=s4-90
-        for i in range(90):
-            set_servo_angle(0,90-i)
-            set_servo_angle(1,90-i)
-            time.sleep(sleep)
-            s1=s1-1
-            s2=s2-1
-        for i in range(90):
-            print('for2')
-            set_servo_angle(2,90-i)
-            set_servo_angle(3,90-i)
-            time.sleep(sleep)
-            s3=s3-1
-            s4=s4-1
-
-###############################################################################
-###5678
-        if s5==0:
-            for i in range(91):
-                set_servo_angle(0,i)
-                set_servo_angle(1,i)
-                time.sleep(sleep)
-                s5=i
-                s6=i
-        else:
-            print('else1')
-            for i in range(91):
-                set_servo_angle(0,s5-i)
-                set_servo_angle(1,s6-i)
-                time.sleep(sleep)
             s5=s5-90
             s6=s6-90
+            s7=s7-90
         
 
 
-        if s7==0:
+        if s8==0:
             for i in range(91):
-                set_servo_angle(2,i)
-                set_servo_angle(3,i)
+                set_servo_angle(7,i)
+                set_servo_angle(8,i)
+                set_servo_angle(9,i)
+                set_servo_angle(10,i)
+                set_servo_angle(11,i)
+                set_servo_angle(12,i)
+                set_servo_angle(13,i)
                 time.sleep(sleep)
-                s7=i
                 s8=i
-        else:
-            print('else1')
-            for i in range(91):
-                set_servo_angle(2,s5-i)
-                set_servo_angle(3,s6-i)
-                time.sleep(sleep)
-            s7=s7-90
-            s8=s8-90
-        for i in range(90):
-            set_servo_angle(0,90-i)
-            set_servo_angle(1,90-i)
-            time.sleep(sleep)
-            s5=s5-1
-            s6=s6-1
-        for i in range(90):
-            print('for2')
-            set_servo_angle(2,90-i)
-            set_servo_angle(3,90-i)
-            time.sleep(sleep)
-            s7=s7-1
-            s8=s8-1
-###############################################################################
-###9 10 11 12
-        if s9==0:
-            for i in range(91):
-                set_servo_angle(0,i)
-                set_servo_angle(1,i)
-                time.sleep(sleep)
                 s9=i
                 s10=i
-        else:
-            print('else1')
-            for i in range(91):
-                set_servo_angle(0,s9-i)
-                set_servo_angle(1,s10-i)
-                time.sleep(sleep)
-            s9=s9-90
-            s10=s10-90
-        
-
-
-        if s11==0:
-            for i in range(91):
-                set_servo_angle(2,i)
-                set_servo_angle(3,i)
-                time.sleep(sleep)
                 s11=i
                 s12=i
-        else:
-            print('else1')
-            for i in range(91):
-                set_servo_angle(2,s9-i)
-                set_servo_angle(3,s10-i)
-                time.sleep(sleep)
-            s11=s11-90
-            s12=s12-90
-        for i in range(90):
-            set_servo_angle(0,90-i)
-            set_servo_angle(1,90-i)
-            time.sleep(sleep)
-            s9=s9-1
-            s10=s10-1
-        for i in range(90):
-            print('for2')
-            set_servo_angle(2,90-i)
-            set_servo_angle(3,90-i)
-            time.sleep(sleep)
-            s11=s11-1
-            s12=s12-1
-###############################################################################
-###13 14
-        if s13==0:
-            for i in range(91):
-                set_servo_angle(0,i)
-                set_servo_angle(1,i)
-                time.sleep(sleep)
                 s13=i
                 s14=i
         else:
             print('else1')
             for i in range(91):
-                set_servo_angle(0,s13-i)
-                set_servo_angle(1,s14-i)
+                set_servo_angle(7,s1-i)
+                set_servo_angle(8,s2-i)
+                set_servo_angle(9,s3-i)
+                set_servo_angle(10,s4-i)
+                set_servo_angle(11,s5-i)
+                set_servo_angle(12,s6-i)
+                set_servo_angle(13,s7-i)
                 time.sleep(sleep)
+            s8=s8-90
+            s9=s9-90
+            s10=s10-90
+            s11=s11-90
+            s12=s12-90
             s13=s13-90
             s14=s14-90
-        
-
-
-        
         for i in range(90):
             set_servo_angle(0,90-i)
             set_servo_angle(1,90-i)
+            set_servo_angle(2,90-i)
+            set_servo_angle(3,90-i)
+            set_servo_angle(4,90-i)
+            set_servo_angle(5,90-i)
+            set_servo_angle(6,90-i)
             time.sleep(sleep)
+            s1=s1-1
+            s2=s2-1
+            s3=s3-1
+            s4=s4-1
+            s5=s5-1
+            s6=s6-1
+            s7=s7-1
+        for i in range(90):
+            print('for2')
+            set_servo_angle(7,90-i)
+            set_servo_angle(8,90-i)
+            set_servo_angle(9,90-i)
+            set_servo_angle(10,90-i)
+            set_servo_angle(11,90-i)
+            set_servo_angle(12,90-i)
+            set_servo_angle(13,90-i)
+            time.sleep(sleep)
+            s8=s8-1
+            s9=s9-1
+            s10=s10-1
+            s11=s11-1
+            s12=s12-1
             s13=s13-1
             s14=s14-1
+
         
 except KeyboardInterrupt:
     setup()
