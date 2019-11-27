@@ -1,5 +1,5 @@
 '''
-四角同步前进
+四角同步前进,对角同步
 '''
 import Adafruit_PCA9685
 import time
@@ -16,26 +16,26 @@ pwm.set_pwm_freq(60)
 def over():  ##舵机回到初始位置
     print(s0,s1,s2,s3)
     for i in range(s0):
-        set_servo_angle(0,s0-i)
+        set_servo_angle(0,s0-(i+1))
         time.sleep(sleep)
     for i in range(s1):
-        set_servo_angle(1,s1-i)
+        set_servo_angle(1,s1-(i+1))
         time.sleep(sleep)
     if s2>90:
         for i in range(s2-90):
-            set_servo_angle(2,s2-i)
+            set_servo_angle(2,s2-(i+1))
             time.sleep(sleep)
     elif s2<90:
         for i in range(90-s2):
-            set_servo_angle(2,s2+i)
+            set_servo_angle(2,s2+(i+1))
             time.sleep(sleep)
     if s3>90:
         for i in range(s3-90):
-            set_servo_angle(3,s3-i)
+            set_servo_angle(3,s3-(i+1))
             time.sleep(sleep)
     elif s3<90:
         for i in range(90-s3):
-            set_servo_angle(3,s3+i)
+            set_servo_angle(3,s3+(i+1))
             time.sleep(sleep)
    
 print('Moving servo on channel x, press Ctrl-C to quit...')
@@ -48,53 +48,53 @@ try:
     while 1:
 
         if s0==0:
-            for i in range(91):
+            for i in range(1,91):
                 set_servo_angle(0,i)
-                set_servo_angle(2,91-i)
+                set_servo_angle(3,90-i)
                 time.sleep(sleep)
                 s0=i
-                s2=90-i
+                s3=90-i
              
         else:
-            for i in range(91):
+            for i in range(1,91):
                 set_servo_angle(0,s0-i)
-                set_servo_angle(2,91-i)
+                set_servo_angle(3,90-i)
                 time.sleep(sleep)
-                s2=91-i
+                s3=90-i
             s0=s0-90
             
      
         
 
 
-        if s2==0:
-            for i in range(91):
+        if s1==0:
+            for i in range(1,91):
                 set_servo_angle(1,i)
-                set_servo_angle(3,91-i)
+                set_servo_angle(2,90-i)
                 time.sleep(sleep)
                 s1=i
-                s3=90-i
+                s2=90-i
         else:
-            for i in range(91):
+            for i in range(1,91):
                 set_servo_angle(1,s1-i)
-                set_servo_angle(3,91-i)
+                set_servo_angle(2,90-i)
                 time.sleep(sleep)
-                s3=91-i
+                s2=90-i
             s1=s1-90
     
-        for i in range(90):
+        for i in range(1,91):
             set_servo_angle(0,90-i)
-            set_servo_angle(2,i)
-            time.sleep(sleep)
-            s0=s0-1
-            s2=i
-            
-        for i in range(90):
-            set_servo_angle(1,90-i)
             set_servo_angle(3,i)
             time.sleep(sleep)
-            s1=s1-1
+            s0=s0-1
             s3=i
+            
+        for i in range(1,91):
+            set_servo_angle(1,90-i)
+            set_servo_angle(2,i)
+            time.sleep(sleep)
+            s1=s1-1
+            s2=i
          
 
         
