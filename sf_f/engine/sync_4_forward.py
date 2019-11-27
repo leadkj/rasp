@@ -50,17 +50,17 @@ try:
         if s0==0:
             for i in range(91):
                 set_servo_angle(0,i)
-                set_servo_angle(2,91-i)
+                set_servo_angle(3,91-i)
                 time.sleep(sleep)
                 s0=i
-                s2=90-i
+                s3=90-i
              
         else:
             for i in range(91):
                 set_servo_angle(0,s0-i)
-                set_servo_angle(2,91-i)
+                set_servo_angle(3,91-i)
                 time.sleep(sleep)
-                s2=91-i
+                s3=91-i
             s0=s0-90
             
      
@@ -70,31 +70,31 @@ try:
         if s2==0:
             for i in range(91):
                 set_servo_angle(1,i)
-                set_servo_angle(3,91-i)
+                set_servo_angle(2,91-i)
                 time.sleep(sleep)
                 s1=i
-                s3=90-i
+                s2=90-i
         else:
             for i in range(91):
                 set_servo_angle(1,s1-i)
-                set_servo_angle(3,91-i)
+                set_servo_angle(2,91-i)
                 time.sleep(sleep)
-                s3=91-i
+                s2=91-i
             s1=s1-90
     
         for i in range(90):
             set_servo_angle(0,90-i)
-            set_servo_angle(2,i)
+            set_servo_angle(3,i)
             time.sleep(sleep)
             s0=s0-1
-            s2=i
+            s3=i
             
         for i in range(90):
             set_servo_angle(1,90-i)
-            set_servo_angle(3,i)
+            set_servo_angle(2,i)
             time.sleep(sleep)
             s1=s1-1
-            s3=i
+            s2=i
          
 
         
